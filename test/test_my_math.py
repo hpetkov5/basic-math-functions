@@ -132,6 +132,33 @@ class TestMultiplication(unittest.TestCase):
         result = test_object.multiplication((1, 2), 3)
         assert result == (1, 2, 1, 2, 1, 2), "Expected (1, 2, 1, 2, 1, 2), received {0}.".format(result)
 
+class TestDivision(unittest.TestCase):
+    '''
+    Unit test class for validating the behavior of division function
+    '''
+    def test_dividing_integers(self):
+        '''
+        Verify the division function returns 3 when provided with 2 valid positive integers (a = 15, b = 5).
+        '''
+        test_object = MyMath()
+        result = test_object.division(15,5)
+        assert result == 3, "Expected 3, received {0}.".format(result)
+
+    def test_dividing_floats(self):
+        '''
+        Verify the division function returns 0.71 when provided with 2 valid positive floats (a = 6.3, b = 8.9).
+        '''
+        test_object = MyMath()
+        result = round(test_object.division(6.3, 8.9), 2)
+        assert result == 0.71, "Expected 0.71, received {0}.".format(result)
+    
+    def test_dividing_boolean(self):
+        '''
+        Verify the division function returns 1 when provided with 2 valid booleans (a = True, b = True).
+        '''
+        test_object = MyMath()
+        result = test_object.division(True, True)
+        assert result == 1, "Expected 1, received {0}.".format(result)
 
 if __name__ == '__main__':
     unittest.main()
