@@ -80,5 +80,58 @@ class TestSubtraction(unittest.TestCase):
         result = test_object.subtraction(True, True)
         assert result == 0, "Expected 0, received {0}.".format(result)
 
+class TestMultiplication(unittest.TestCase):
+    '''
+    Unit test class for validating the behavior of multiplication function
+    '''
+    def test_multiplying_integers(self):
+        '''
+        Verify the multiplication function returns 75 when provided with 2 valid positive integers (a = 15, b = 5).
+        '''
+        test_object = MyMath()
+        result = test_object.multiplication(15,5)
+        assert result == 75, "Expected 75, received {0}.".format(result)
+
+    def test_multiplying_floats(self):
+        '''
+        Verify the multiplication function returns 56.07 when provided with 2 valid positive floats (a = 6.3, b = 8.9).
+        '''
+        test_object = MyMath()
+        result = round(test_object.multiplication(6.3, 8.9), 2)
+        assert result == 56.07, "Expected 56.07, received {0}.".format(result)
+    
+    def test_multiplying_boolean(self):
+        '''
+        Verify the multiplication function returns 1 when provided with 2 valid booleans (a = True, b = True).
+        '''
+        test_object = MyMath()
+        result = test_object.multiplication(True, True)
+        assert result == 1, "Expected 1, received {0}.".format(result)
+
+    def test_multiplying_string(self):
+        '''
+        Verify the multiplication function returns "Hello Hello Hello " when provided with a valid string and a valid positive integer (a = "Hello ", b = 3).
+        '''
+        test_object = MyMath()
+        result = test_object.multiplication("Hello ", 3)
+        assert result == "Hello Hello Hello ", "Expected 'Hello Hello Hello ', received {0}.".format(result)
+
+    def test_multiplying_list(self):
+        '''
+        Verify the multiplication function returns [1, 2, 1, 2, 1, 2] when provided with a valid list and a valid positive integer (a = [1, 2], b = 3).
+        '''
+        test_object = MyMath()
+        result = test_object.multiplication([1, 2], 3)
+        assert result == [1, 2, 1, 2, 1, 2], "Expected [1, 2, 1, 2, 1, 2], received {0}.".format(result)
+
+    def test_multiplying_tuple(self):
+        '''
+        Verify the multiplication function returns (1, 2, 1, 2, 1, 2) when provided with a valid tuple and a valid positive integer (a = (1, 2), b = 3).
+        '''
+        test_object = MyMath()
+        result = test_object.multiplication((1, 2), 3)
+        assert result == (1, 2, 1, 2, 1, 2), "Expected (1, 2, 1, 2, 1, 2), received {0}.".format(result)
+
+
 if __name__ == '__main__':
     unittest.main()
