@@ -8,7 +8,7 @@ class MyMath:
     def addition(self,a,b):
         '''
         This function takes 2 objects and adds them together.
-        Works with:
+        Works with: Integers, Floats, Strings, Lists, Booleans
 
         '''
         return a+b
@@ -16,7 +16,7 @@ class MyMath:
     def subtraction(self,a,b):
         '''
         This function takes the value from object b and subtracts it from the value of object a.
-        Works with:
+        Works with: Integers, Floats, Booleans
 
         '''
         return a-b
@@ -24,7 +24,7 @@ class MyMath:
     def multiplication(self,a,b):
         '''
         This function multiplies <a> times <b>.
-        Works with:
+        Works with: Integers, Floats, Booleans, Strings (repeats string <a> <b> times), Lists (repeats list <a> <b> times), Tuples (repeats tuple <a> <b> times)
 
         '''
         return a*b
@@ -32,7 +32,7 @@ class MyMath:
     def division(self,a,b):
         '''
         This function divides object <a> into <b> equal parts.
-        Works with:
+        Works with: Integers, Floats, Booleans
 
         '''
         return a/b
