@@ -84,6 +84,12 @@ class TestDivision(unittest.TestCase):
         actual_result = MyMath.division(15, -5)
         self.assertEqual(expected_result, actual_result, f"Expected {expected_result}, received {actual_result}.")
 
+    def test_dividing_by_zero(self):
+        with self.assertRaises(ValueError) as context:
+            MyMath.division(15, 0)
+        expected_result = "Cannot divide by zero."
+        actual_result = str(context.exception)
+        self.assertEqual(actual_result, expected_result, f"Expected '{expected_result}', received '{actual_result}'.")
 
 if __name__ == '__main__':
     unittest.main()
